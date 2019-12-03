@@ -1,0 +1,15 @@
+<apex:page >
+
+ <apex:form >
+ 
+ <apex:actionFunction name="updateCount" action="{!updateCount}" reRender="gg" />
+
+<script>
+  
+    addEventListener("load", updateCount, false);
+
+</script>
+
+</apex:form>
+
+</apex:page>

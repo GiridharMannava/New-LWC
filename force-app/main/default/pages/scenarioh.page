@@ -1,0 +1,83 @@
+<apex:page sidebar="false" showHeader="false">
+ <apex:pageBlock title="Zylker">
+ <apex:pageBlockSection title="Self service" collapsible="false">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  
+  <style>
+  #accordion {
+    padding: 10px;
+    width: 200px;
+    height: 220px;
+  }
+  </style>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+     heightStyle: "content"
+     collapsible: true
+  } );
+  
+  </script>
+</head>
+<body>
+ 
+<div id="accordion">
+
+  <h3>Leave Tracker</h3>
+  
+  <div>
+          
+  </div>
+  
+  <h3>Time Tracker</h3>
+  
+  <div>
+    
+  </div>
+  
+  <h3>Attendance</h3>
+  
+  <div>
+    
+  </div>
+  
+  <h3>Files</h3>
+  
+  <div>
+    
+  </div>
+  
+  <h3>Organization</h3>
+               
+    <ul>
+      <div>Announcements</div><br/>
+      <div>Organization Tree</div><br/>
+      <div>Groups</div><br/>
+      <div>Departments</div><br/>
+      <div>Designation</div><br/>
+      <div>Employee</div><br/>
+      <div>Candidates List</div><br/>
+      <div>Resignation Form</div><br/>
+      <div>Offer Letter Form</div><br/>
+      <div>Training</div><br/>
+      <div>Employment Proof Letter</div><br/>
+      <div>Asset Form</div><br/>
+      <div>Expense Submission</div>
+    </ul>
+
+ </div>
+ 
+</body>
+</html>
+</apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:page>

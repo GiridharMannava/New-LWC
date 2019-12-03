@@ -1,0 +1,11 @@
+<apex:page controller="actionstatus" sidebar="false">
+<apex:form >
+<apex:pageBlock >
+<apex:outputpanel id="counter">  <h1>
+<apex:outputText value="Click Me-->: {!count}"/> </h1>
+<apex:actionSupport event="onclick" action="{!incrementCounter}" rerender="counter" status="counterStatus"/>
+</apex:outputpanel>
+<apex:actionStatus id="counterStatus" startText=" (processing...)" stopText="(completed.!)"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

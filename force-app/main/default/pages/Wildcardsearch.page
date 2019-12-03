@@ -1,0 +1,16 @@
+<apex:page controller="WildcardSOQLController" id="pg">
+  <apex:form id="fm" >
+    <apex:pageblock id="pb" >
+        <apex:inputtext value="{!inputtext}" id="inpt"/>
+        <apex:commandbutton value=" Search " action="{!searchRecords}" />
+    </apex:pageblock>
+    <apex:pageblock rendered="{!flagshow}">
+      <apex:pageblocktable value="{!accList}" var="acc">
+        <apex:column value="{!acc.name}"/>
+        <apex:column value="{!acc.accountnumber}"/>
+      </apex:pageblocktable>
+    </apex:pageblock>
+    
+    
+  </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="checkcount" action="{!savcont}">
+
+<apex:pageBlock >
+
+<apex:pageBlockSection >
+
+<apex:outputText value="{!kt}"/>
+
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+
+
+  
+</apex:page>

@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation For Student Component</aura:description>
+    <!--<aura:example name="LongdaysAfter" ref="c:LongdaysAfter" label="Registration Form For Student">
+		Example Description For Registration Component
+    </aura:example>-->
+</aura:documentation>

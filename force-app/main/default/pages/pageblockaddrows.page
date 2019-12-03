@@ -1,0 +1,59 @@
+<apex:page controller="pageblockaddrows">
+ <Apex:pageMessages ></Apex:pageMessages>
+ <apex:form >
+ 
+ 
+ <Apex:pageBlock >
+ 
+ 
+ 
+ <apex:pageBlockSection >
+ 
+ 
+ <apex:pageBlockTable value="{!latacc}" var="ts" id="pb">
+ 
+ <apex:column headerValue="Action">
+ <apex:commandButton value="Add" action="{!addacc}" rerender="pb"/>
+ </apex:column>
+ 
+  <apex:column headerValue="Action">
+ <apex:commandButton value="Delete" action="{!accdel}" reRender="pb"/>
+ </apex:column>
+ 
+ 
+ <apex:column headerValue="Name">
+ <apex:inputText value="{!ts.name}" required="true"/>
+ </apex:column>
+
+  
+ <apex:column headerValue="Phone">
+ <apex:inputText value="{!ts.Phone}"/>
+ </apex:column>
+  
+ 
+ </apex:pageBlockTable>
+ 
+ <Apex:commandButton value="Insert Account" action="{!accinsert}"/>
+ 
+ 
+ 
+ 
+ </apex:pageBlockSection>
+ 
+ 
+ 
+ 
+ </Apex:pageBlock>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </apex:form>
+ 
+ 
+ 
+ 
+</apex:page>

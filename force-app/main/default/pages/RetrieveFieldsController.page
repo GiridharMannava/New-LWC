@@ -1,0 +1,18 @@
+<apex:page controller="RetrieveFieldsController" action="{!retrieveFields}">
+
+   <apex:form >
+
+      <apex:pageblock >
+
+           <apex:pageblockTable value="{!objFields}" var="obj">
+
+              <apex:column value="{!obj}"/>
+
+           </apex:pageblockTable>
+
+      </apex:pageblock>
+
+   </apex:form>
+
+
+</apex:page>

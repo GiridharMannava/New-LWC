@@ -1,0 +1,41 @@
+<apex:page controller="wrapclass" showHeader="true">
+  
+  <Apex:form >
+ 
+  <apex:pageBlock id="pb" title="wrapper class">
+  
+  
+  <apex:commandButton value="Delete Account" action="{!delacc}"/>
+  
+  <apex:pageBlockTable value="{!wraplst}" var="ns">
+  
+  <apex:column >
+  
+  <apex:facet name="header"> 
+  
+  <apex:inputCheckbox value="{!mschk}">
+  
+  <apex:actionSupport event="onclick" action="{!selectall}" reRender="pb"/>
+  
+  </apex:inputcheckbox>
+  
+  
+  </apex:facet>
+  
+  <apex:inputCheckbox value="{!ns.chk}"/>
+  
+  </apex:column>
+  
+  <apex:column value="{!ns.acc.Id}"/>
+  
+  <apex:column value="{!ns.acc.Name}"/>
+  
+  
+  </apex:pageBlockTable>
+  
+  
+  </apex:pageBlock>
+
+  </Apex:form>  
+ 
+</apex:page>

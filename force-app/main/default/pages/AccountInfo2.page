@@ -1,0 +1,25 @@
+<apex:page controller="AccountInfo2" showHeader="true">
+    <apex:form >
+    <apex:actionFunction name="Dis" action="{!Display}" reRender="pbs"/>
+        <apex:pageBlock >
+        
+           
+            <apex:pageBlockSection title="Account Info">
+                <apex:outputLabel value="Type"></apex:outputLabel>
+                <apex:selectList value="{!AType}" size="1" onchange="Dis();">
+                <apex:selectOptions value="{!Types}"></apex:selectOptions>
+                </apex:selectList>
+               <!-- <apex:inputText value="{!AType}"/>-->
+                <apex:commandButton value="Search" action="{!Display}" reRender="pbs"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="List of Accounts" id="pbs">
+                
+                <apex:pageBlockTable value="{!objacc}" var="a" columns="5">
+                    <apex:column value="{!a.name}"/>
+                    <apex:column value="{!a.id}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

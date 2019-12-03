@@ -1,0 +1,31 @@
+<apex:page controller="pagemessages" >
+
+<apex:form id="pg1">
+
+<apex:pageMessage summary="Account Name is mandatory" severity="info" strength="3" rendered="{!chk}" id="pg"/>
+
+<apex:pageMessages ></apex:pageMessages>
+        
+
+<apex:pageBlock >
+
+<Apex:pageBlockSection >
+
+
+<apex:inputText value="{!accname}" label="Account Name" />
+
+<apex:inputText value="{!accphone}" label="Phone" />
+
+
+<apex:commandButton value="Save Account" action="{!savacc}" reRender="pg1"/>
+
+</Apex:pageBlockSection>
+
+
+</apex:pageBlock>
+
+
+</apex:form>
+
+ 
+</apex:page>

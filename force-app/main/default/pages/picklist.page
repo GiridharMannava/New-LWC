@@ -1,0 +1,18 @@
+<apex:page controller="AccountController1_picklistrendering">
+   <apex:form >
+      <apex:pageBlock title="Account Name">
+            Account Names&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <apex:selectList value="{!selectedAccId}" size="1">                                 
+                <apex:selectOptions value="{!AccountNames}"/>
+                <apex:actionSupport event="onchange" reRender="a"/>
+             </apex:selectList>
+          
+             <br/><br/>
+           
+           Related Contact Names&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <apex:selectList value="{!selectedConId}" size="1"  id="a">
+                <apex:selectOptions value="{!ContactNames}" />
+             </apex:selectList>
+       </apex:pageBlock>               
+    </apex:form>
+</apex:page>

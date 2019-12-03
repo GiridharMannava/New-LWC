@@ -1,0 +1,29 @@
+<apex:page showHeader="false" standardController="Student_Information__c" >
+
+     <script>
+     function gr() {
+     
+     alert("HELLO GIRIDHAR");
+     
+     }
+
+     </script>
+   
+    <apex:pageBlock title="ANTAAA NAAA ISTAM" onclick="gr()">
+    <apex:pageBlockSection columns="2" title="MY PRACTICE" collapsible="true" rendered="true">
+    
+    <apex:outputField value="{!Student_Information__c.id}" label="NE ISTAM ID"/>
+    <apex:outputField value="{!Student_Information__c.name}" label="NA ISTAM NAME"/>
+    
+    
+    
+    </apex:pageBlockSection>
+    
+    
+    
+    
+    </apex:pageBlock>
+
+
+
+</apex:page>

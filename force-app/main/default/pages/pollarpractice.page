@@ -1,0 +1,8 @@
+<apex:page controller="pollartest">
+<apex:form >
+<apex:pageBlock title="Current Time" id="pb">
+<apex:actionPoller action="{!pollartest}" reRender="pb" interval="5"/>
+Time: {!sample}
+</apex:pageBlock>
+</apex:form>
+</apex:page>

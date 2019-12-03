@@ -1,0 +1,5 @@
+<apex:page controller="AggregateResult_Example">
+    Total : {!total} <br/><br/>
+    Minval : {!minval}<br/><br/>
+    Maxval : {!maxval}
+</apex:page>

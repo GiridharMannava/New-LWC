@@ -1,0 +1,53 @@
+<apex:page controller="picklstaccout" showHeader="TRue" sidebar="false">
+
+
+<apex:form >
+
+INDUSTRY :<apex:selectList id="countries" value="{!industry}" size="1" required="true">
+      
+  <apex:selectOptions value="{!countries}"/>
+  <apex:actionSupport action="{!queryaccrecord}" event="onchange"/>
+  
+</apex:selectList>
+
+TYPE :<apex:selectList id="type" value="{!type}" size="1" required="true">
+
+<apex:selectOptions value="{!types}"/>
+<apex:actionSupport action="{!queryaccrecord}" event="onchange"/>
+</apex:selectList> 
+<apex:outputLabel >Rating :</apex:outputLabel>
+<apex:inputText value="{!rating}"/>
+<br/>
+<apex:commandButton value="Submit" action="{!queryaccrecord}"/>
+<br/>
+<apex:pageBlock title="My Work">
+
+<apex:pageBlockSection title="Result" collapsible="false">
+
+<apex:pageBlockTable value="{!aclst}" var="ts">
+
+<apex:column value="{!ts.Id}"/>
+
+<apex:column value="{!ts.Name}"/>
+<apex:column value="{!ts.Industry}"/>
+
+<apex:column value="{!ts.type}"/>
+<apex:column value="{!ts.rating}"/>
+</apex:pageBlockTable>
+
+
+</apex:pageBlockSection>
+
+
+</apex:pageBlock>
+
+
+
+
+</apex:form>
+
+
+
+
+  
+</apex:page>

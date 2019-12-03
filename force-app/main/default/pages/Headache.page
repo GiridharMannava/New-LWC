@@ -1,0 +1,51 @@
+<apex:page sidebar="false">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>jQuery UI Menu - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#menu" ).menu();
+  } );
+  </script>
+  <style>
+  .ui-menu { width: 190px; height:400px }
+  </style>
+</head>
+<body>
+ 
+<ul id="menu">
+  <li class="ui-state-disabled"><div>Self-service</div></li><br/>
+  <li><div>Leave Tracker</div><ul> </ul></li><br/>  
+  <li><div>Time Tracker</div><ul> </ul></li><br/>
+  <li><div>Attendance</div><ul> </ul></li><br/>
+  <li><div>Files</div><ul> </ul></li><br/>
+  <li><div>Organization</div>
+    <ul>
+      <li><div>Announcements</div></li><br/>
+      <li><div>Organization Tree</div></li><br/>
+      <li><div>Groups</div></li><br/>
+      <li><div>Departments</div></li><br/>
+      <li><div>Designation</div></li><br/>
+      <li><div>Employee</div></li><br/>
+      <li><div>Candidates List</div></li><br/>
+      <li><div>Resignation Form</div></li><br/>
+      <li><div>Offer Letter Form</div></li><br/>
+      <li><div>Training</div></li><br/>
+      <li><div>Employment Proof Letter</div></li><br/>
+      <li><div>Asset Form</div></li><br/>
+      <li><div>Expense Submission</div></li>
+    </ul>
+  </li>
+  
+</ul> 
+ 
+ 
+</body>
+</html>
+</apex:page>

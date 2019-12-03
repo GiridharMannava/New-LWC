@@ -1,0 +1,17 @@
+<apex:component controller="compquert">
+  
+  <apex:attribute name="accountId" type="Id" description="Id of the Account to be passed" assignTo="{!Accnt}"/>
+  
+  
+  
+  
+   The id of the Account Record is {!accountId}<br/>
+   
+   
+  
+  
+   {!acc.Id}<br/>
+   
+   {!acc.Name}
+  
+</apex:component>

@@ -1,0 +1,36 @@
+<apex:page standardController="Staffinformation__c">
+
+<apex:form >
+
+<apex:pageBlock >
+
+
+<apex:pageBlockSection columns="1" >
+
+
+<apex:pageBlockTable value="{!Staffinformation__c.StaffInformation__r}" var="mgr">
+
+<apex:column value="{!mgr.Id}"/>
+
+<apex:column value="{!mgr.name}"/>
+
+
+</apex:pageBlockTable>
+
+<apex:inputField value="{!Staffinformation__c.Name}"/>
+
+<apex:inputField value="{!Staffinformation__c.Department__c}"/>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons >
+
+<apex:commandButton action="{!save}" value="Submit"/>
+
+</apex:pageBlockButtons>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

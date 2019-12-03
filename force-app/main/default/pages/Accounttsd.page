@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+ 
+ 
+ 
+ <c:Demo accountId="{!Account.Id}"/>
+ 
+</apex:page>

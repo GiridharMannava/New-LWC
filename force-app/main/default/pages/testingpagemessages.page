@@ -1,0 +1,25 @@
+<apex:page controller="giritest" SHowHeader="true">
+
+<apex:form id="GR">
+
+<apex:pageMessage summary="ACCOUNT NAME IS MANDATORY" severity="warning" strength="3" rendered="{!mgr}"/>
+
+<apex:pageMessages ></apex:pageMessages>
+
+<apex:pageBlock >
+
+<apex:pageBlockSection columns="1" title="GIRIDHAR TESTING ON PAGE MESSAGES" >
+
+<apex:inputText value="{!acname}" label="ACCOUNT NAME"/>
+
+<apex:inputText value="{!acphone}" LAbel="ACCOUNT PHONE"/>
+
+<apex:commandButton value="SAVE ACCOUNT" action="{!Savegr}" RERender="GR"/>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,32 @@
+<apex:page controller="vfpage">
+ 
+ <apex:form >
+ 
+ <apex:pageBlock >
+ 
+ <apex:pageBlockSection >
+ 
+ 
+ <apex:inputText value="{!acc.name}" label="Name"/>
+ 
+  <apex:inputText value="{!acc.phone}" label="Phone"/>
+
+ 
+ <apex:commandButton value="Insert Account" action="{!addacc}"/>
+ 
+ 
+ </apex:pageBlockSection>
+ 
+ 
+ 
+ 
+ 
+ 
+ </apex:pageBlock>
+ 
+ 
+ </apex:form>
+ 
+ 
+ 
+</apex:page>

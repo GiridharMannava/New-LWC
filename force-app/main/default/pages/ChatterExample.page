@@ -1,0 +1,13 @@
+<apex:page controller="ChatterExample">
+
+<apex:form >
+
+<apex:inputTextarea value="{!body}"/>
+
+<apex:inputTextarea value="{!cbody}"/>
+
+<apex:commandButton value="Shout" action="{!shout}"/>
+
+</apex:form>
+
+</apex:page>

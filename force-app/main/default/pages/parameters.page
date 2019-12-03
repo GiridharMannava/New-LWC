@@ -1,0 +1,20 @@
+<apex:page standardController="Account" recordSetVar="acts" sidebar="false">
+<apex:form >
+ <apex:pageBlock title="Select The Account You Want to view">
+  <apex:pageBlockSection >
+    <apex:pageBlockTable value="{!acts}" var="a">
+       <apex:column >
+       <apex:commandLink >
+       {!a.Name} <apex:param value="{!a.ID}" name="AccountID" id="gh"/>
+       </apex:commandLink>       
+       </apex:column>
+       <apex:column value="{!a.Type}"/>
+       <apex:column value="{!a.Industry}"/>
+       <apex:column value="{!a.Phone}"/>
+       <apex:column value="{!a.Rating}"/>
+   </apex:pageBlockTable>
+   <apex:detail relatedList="false" subject="{!$CurrentPage.parameters.accountid}"/>
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:form>
+</apex:page>

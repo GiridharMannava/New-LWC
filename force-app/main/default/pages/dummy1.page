@@ -1,0 +1,9 @@
+<apex:page controller="dummy2" showHeader="false">
+
+<h1>
+<p>HI I AM GIRIDHAR</p>
+</h1>
+
+{!qwerty}
+
+</apex:page>

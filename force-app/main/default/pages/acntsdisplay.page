@@ -1,0 +1,40 @@
+<apex:page controller="acntsdisplaying" readOnly="true">
+
+<apex:form >
+
+<apex:pageBlock >
+
+<apex:pageBlockSection >
+
+<apex:pageBlockTable value="{!acntslist}" var="ts" rows="30" first="0" title="HOW IS MY WORK" rules="rows">
+
+<apex:column value="{!ts.Id}" headerValue="Giridhar Testing Account ID" width="50%"/>
+
+<apex:column value="{!ts.Name}" headerValue="Giridhar Testing Account NAME"/>
+
+</apex:pageblocktable>
+
+
+
+
+<apex:pageBlockTable value="{!contslist}" var="ap" rows="35" first="0" title="HOWWW IS THIS" rules="groups">
+
+<apex:column value="{!ap.Id}" headerValue="Giridhar Testing Contact ID" width="50%"/>
+
+<apex:column value="{!ap.Name}" headerValue="Giridhar Testing Contact NAME"/>
+
+</apex:pageBlockTable>
+
+
+
+
+<apex:actionPoller action="{!pollartest}" interval="5"/>
+
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

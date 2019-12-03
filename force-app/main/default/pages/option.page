@@ -1,0 +1,31 @@
+<apex:page controller="selectlst">
+ 
+ <apex:form >
+ 
+ <apex:pageBlock >
+ 
+ 
+  <apex:selectList id="countries" value="{!test}" size="1" required="true">
+  <apex:selectOptions value="{!countries}"/>
+</apex:selectList>
+
+ <apex:selectList id="countries1" value="{!test1}" size="2" required="true">
+  <apex:selectOptions value="{!countries1}"/>
+</apex:selectList>
+
+<apex:commandButton value="Submit" action="{!accoutn}"/>
+
+<apex:pageBlockTable value="{!aclst}" var="ns">
+
+<apex:column value="{!ns.Id}"/>
+
+<apex:column value="{!ns.name}"/>
+
+
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+
+ </apex:form>
+ 
+</apex:page>

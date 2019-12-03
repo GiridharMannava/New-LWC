@@ -1,0 +1,42 @@
+<apex:page >
+ 
+ <script>
+  
+     function sub(){
+       
+       alert("hi");
+       
+       var ts=document.getElementById("txt").value;
+       
+       alert(ts);
+       
+       var chk=document.getElementById("chk").checked;
+       
+       alert(chk);
+       
+       if(chk){
+       
+       document.getElementById("msg").innerHTML=ts;
+       
+       }
+     
+     }
+   
+ 
+ </script>
+ 
+ 
+ <Apex:form id="frm">
+ 
+ Name:<input type="textbox" id="txt"/><br/>
+ 
+ Married:<input type="checkbox" id="chk"/><br/> 
+ 
+ <p id="msg">Welcome to the page</p>
+ 
+ <button onclick="sub();" rendered="frm">Submit</button>
+ 
+ 
+ </Apex:form>
+ 
+</apex:page>

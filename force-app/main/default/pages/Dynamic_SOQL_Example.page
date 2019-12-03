@@ -1,0 +1,36 @@
+<apex:page controller="Dynamic_SOQL_Example">
+    <apex:form >
+        <style>
+        	.box{
+            	width:150px;
+            	geight:100px;
+            	}
+            
+        </style>
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="object"/> 
+                    <apex:selectList size="1" style="width:150px">
+                    <apex:selectOptions value="{!objects}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:panelGrid columns="3">
+                <apex:selectList multiselect="true" styleClass="box">
+                    <apex:selectOptions value="{!leftoptions}"/>
+                    </apex:selectList>
+                    <apex:panelGrid columns="1">
+                        <br/>
+                        <apex:commandButton value="Add"/>
+                        <br/>
+                        <br/>
+                        <apex:commandButton value="Del"/>
+                    </apex:panelGrid>
+                    <apex:selectList multiselect="true" styleClass="box">
+                        <apex:selectOptions value="{!rightoptions}"/>
+                    </apex:selectList>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

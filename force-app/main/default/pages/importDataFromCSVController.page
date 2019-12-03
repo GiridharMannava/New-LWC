@@ -1,0 +1,39 @@
+<apex:page controller="importDataFromCSVController">
+
+<apex:form >
+
+<apex:pageMessages />
+
+<apex:pageBlock >
+
+<apex:pageBlockSection >
+
+<apex:inputFile value="{csvFileBody}" fileName="{!csvAsString}"/>
+
+<apex:commandButton value="Import Account" action="{!importCSVFile}"/>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+<apex:pageBlock >
+
+<apex:pageBlockTable value="{!accList}" var="acc">
+
+<apex:column value="{!acc.name}"/>
+
+<apex:column value="{!acc.AccountNumber}"/>
+
+<apex:column value="{!acc.Type}"/>
+
+<apex:column value="{!acc.AccountSource}"/>
+
+<apex:column value="{!acc.Industry}"/>
+
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

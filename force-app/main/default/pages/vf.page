@@ -1,0 +1,22 @@
+<apex:page controller="accountinfo">
+  <apex:form > 
+     <apex:pageBlock title="Account information">
+       <apex:pageBlockSection title="Search layout">
+        <apex:outputLabel >Name</apex:outputLabel>
+        <apex:inputText value="{!AName}"/>
+        <apex:outputLabel >Phone</apex:outputLabel>
+        <apex:inputText value="{!Aphone }"/>
+       <apex:commandButton value="Search" action="{!Search}"/>
+      </apex:pageBlockSection>
+     <apex:pageBlockSection title="List of Account ">
+      <apex:pageBlockTable value="{!listacc}" var="a">
+        <apex:column value="{!a.Name}"/>
+        <apex:column value="{!a.Phone}"/>
+        <apex:column value="{!a.Fax}"/>
+      </apex:pageBlockTable>
+     </apex:pageBlockSection>
+ </apex:pageBlock>
+
+  </apex:form>
+
+</apex:page>

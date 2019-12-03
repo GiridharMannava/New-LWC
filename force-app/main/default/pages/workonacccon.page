@@ -1,0 +1,16 @@
+<apex:page controller="workonacccon" sidebar="false">
+<apex:form id="dd">
+<apex:pageBlock >
+<apex:pageBlockSection columns="2" rendered="true" title="Work On Account" id="dd">
+<apex:inputText label="Account Name" value="{!accname}"/>
+<apex:inputText label="Phone" value="{!accphone}"/>
+<apex:inputText label="Website" value="{!accWebsite}"/>
+<apex:inputText label="Description" value="{!accDescription}"/>
+<apex:inputText label="Contact Name" value="{!conname}"/>
+<apex:inputText label="Contact Phone" value="{!connum}"/>
+
+<apex:commandButton value="SAVE" action="{!savresult}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

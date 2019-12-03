@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Some time we will get a requirement to Display the all the records in objects and whenever select one Record Then Display the Detail page of that Record and Show the Similar  Records with Same Industry Type.</description>
+    <label>Displaythealltherecords</label>
+</ApexPage>

@@ -1,0 +1,58 @@
+<aura:component controller="SaveRegistrationFormDetails" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" >
+    <aura:attribute name="NameofStudent" type="string" default="" />
+    <aura:attribute name="ParentsName" type="string" default=""/>
+    <aura:attribute name="StandardorClass" type="string" default=""/>
+    <aura:attribute name="NofHoursStudy" type="string[]" default=", Less than 1 hour, In between 1 to 4 hrs,
+                                                                  In between 4 to 8 hrs, More than 8 hours"/> 
+    <aura:attribute name="Usersresponse" type="string[]" default=""/> 
+    <aura:attribute name="MobileNumber" type="integer" default=""/>
+    <aura:attribute name="HaveYouTakenCourceBefore" type="boolean" default="false"/>
+    <aura:attribute name="AreYouIntrestedInOnlineCource" type="boolean" />
+    <aura:attribute name="abc" type="string" default="false"/>
+    <aura:attribute name="Checkboxvalue" type="boolean" default="false"/>
+    <aura:attribute name="pageHeading" type="string" default="Registration Form For Student"/>
+    <aura:attribute name="EducationalDetailsList" type="List" default="[]"/>
+    <aura:attribute name="RegForm" type="Registration_Form__c" default="{'sobjectType': 'Registration_Form__c'}"/>
+    <aura:attribute name="RegistrationRecordId" type="string"/>
+    <div class="slds-m-top_medium">
+        <div class="slds-page-header">
+            <div class="slds-align_absolute-center">
+                <div class="slds-text-heading_large">               
+                    {!v.pageHeading}
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="slds-size_3-of-8">
+    <lightning:input label="Enter your Name" name="studentsname" value="{!v.RegForm.Name}" required="true"/>
+    <br/>
+    <lightning:input label="Enter your Parent's Name" name="parentsname" value="{!v.RegForm.Giridharm__Parent_Name__c}"/>
+    <br/>
+    <lightning:input label="Which class do you study?" name="classname" value="{!v.RegForm.Giridharm__Which_class__c}"/>
+    <br/>
+    <lightning:select label="How many hours do you study?" name="nuumberofstudyhours"  value="{!v.RegForm.Giridharm__Study_Hours__c}">
+        <aura:iteration items="{!v.NofHoursStudy}" var="color">
+            <option value="{!color}" text="{!color}"></option>
+        </aura:iteration>
+    </lightning:select>
+    <br/>
+    <lightning:input label="Enter your mobile number" name="mobilenumber" type="telephone" value="{!v.RegForm.Giridharm__Mobile_Number__c}"/>
+        <aura:iteration items="{!v.EducationalDetailsList}" var="item" indexVar="index">
+            <c:Add_Educational_Details RegistrationRecordId="{!v.RegistrationRecordId}" EducationDetailsListInnerComponent="{!v.EducationalDetailsList}" indexNo="{!index}"/>
+        </aura:iteration>
+        <br/>
+        <lightning:button iconName="utility:add" variant="border-filled" label="Add Educational Details" onclick="{!c.addDetails}"/>
+        <br/>
+        <br/>
+    <lightning:input aura:id="checkBox" label="Are you available on weekends to attend the classes ?" name="firstcheckbox"
+                     type="checkbox" onchange="{!c.Secondfunction}"/>
+        <br/>
+    <aura:if isTrue="{!v.Checkboxvalue}">
+        <i>Hello ! You have checked this box.</i>
+    </aura:if>
+        <br/>
+    <br/>
+    <lightning:button variant="success" label="Submit" title="Submit" onclick="{!c.doSubmit}" />
+    </div>
+</aura:component>

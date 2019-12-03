@@ -1,0 +1,25 @@
+<apex:page controller="todayhomework" showHeader="false">
+
+<apex:form >
+
+<apex:pageBlock >
+
+<apex:pageBlockSection columns="1" title="GIRIDHAR">
+
+<apex:inputText value="{!accname}" label="Account Name"/>
+
+<apex:inputText value="{!phone}" label="Phone Number"/>
+
+<apex:inputText value="{!conname}" label="Contact Name"/>
+
+<apex:inputText value="{!conphone}" label="Contact Phone"/>
+
+<apex:commandButton value="SAVE ACCOUNT" action="{!saveresult}"/>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

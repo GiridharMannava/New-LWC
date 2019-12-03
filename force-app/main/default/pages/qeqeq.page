@@ -1,0 +1,8 @@
+<apex:page showHeader="true">
+<apex:form ></apex:form>
+<apex:actionRegion immediate="true"></apex:actionRegion>
+just for testing purpose
+<apex:outputlink value="/apex/qeqeq">click<apex:param name="EN" value="Success"></apex:param></apex:outputlink>
+<apex:form ></apex:form>
+<apex:form ></apex:form>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page controller="referen">
+ 
+ <p>WELCOME TO SALESFORCE</p>
+   {!varb}
+ 
+</apex:page>

@@ -1,0 +1,21 @@
+<apex:page controller="SelectOptionController">
+ <apex:form > 
+   <apex:commandbutton value="Show Accounts" action="{!show}"/>
+   
+ <apex:pageBlock >    
+ 
+   <apex:outputLabel > Industrys :</apex:outputLabel>
+    <apex:selectList size="1" value="{!selectedcountry}">
+     <apex:selectOption itemLabel="--None--" itemvalue=""></apex:selectOption>
+     <apex:selectOption itemLabel="Agriculture" itemvalue="Agriculture"></apex:selectOption>
+     <apex:selectOption itemLabel="Banking" itemvalue="Banking"></apex:selectOption>
+     <apex:selectOption itemLabel="Electronics" itemvalue="Electronics"></apex:selectOption>
+    </apex:selectList>     
+    </apex:pageBlock> 
+   
+   <apex:pageBlock title="selected values">
+    <apex:outputText value="{!selectedValues}" style="color:blue"/>   
+   </apex:pageBlock>
+ </apex:form>
+
+</apex:page>

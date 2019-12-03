@@ -1,0 +1,25 @@
+<apex:page controller="QueryAllFieldscontrol">
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockButtons location="bottom">
+  <apex:commandButton value="Fetch" action="{!search}"/>
+  </apex:pageBlockButtons>
+  <apex:pageBlockSection >
+  <apex:selectList value="{!listval}" size="5" label="Sobjects">
+  <apex:selectOptions value="{!sobjectnames}">
+  </apex:selectOptions>
+  <apex:actionSupport action="{!Fetch}" event="onchange"/>
+  </apex:selectList>
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Query">
+  <apex:inputTextarea value="{!fields1}" rows="3" cols="100" label="Query of {!listval} object:" />
+  </apex:pageBlockSection>
+  <apex:pageBlockTable value="{!allsobj}" var="obj1">
+ <apex:repeat value="{!qfiled}" var="qf">
+ <apex:column value="{!obj1[qf]}"/>
+ </apex:repeat>
+  
+  </apex:pageBlockTable>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

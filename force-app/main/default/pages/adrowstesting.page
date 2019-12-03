@@ -1,0 +1,48 @@
+<apex:page controller="adrowstesting" showHeader="false">
+
+<apex:pageMessages ></apex:pageMessages>
+
+<apex:form >
+
+<apex:pageBlock >
+
+<apex:pageBlockSection >
+
+<apex:pageBlockTable value="{!abcd}" var="gr" id="tt">
+
+<apex:column headerValue="ACTION ">
+
+<apex:commandButton value="ADD" action="{!addacnt}" reRender="tt"/>
+
+</apex:column>
+
+<apex:column headerValue="ACTION">
+
+<apex:commandButton value="DELETE" action="{!delacnt}" reRender="tt"/>
+
+</apex:column>
+
+<apex:column headerValue="Account Name">
+
+<apex:inputText value="{!gr.Name}" required="true"/>
+
+</apex:column>
+
+<apex:column headerValue="Account Phone">
+
+<apex:inputText value="{!gr.Phone}"/>
+
+</apex:column>
+
+</apex:pageBlockTable>
+
+<apex:commandButton value="INSERT ACCOUNTS" Action="{!acntinsert}"/>
+
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

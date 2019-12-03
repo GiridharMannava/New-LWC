@@ -1,0 +1,29 @@
+<apex:page standardController="Contact" docType="html-5.0">
+<html lang="en">
+<head>
+   <apex:stylesheet value="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+   <apex:includeScript value="https://code.jquery.com/jquery-1.12.4.js" />
+   <apex:includeScript value="https://code.jquery.com/ui/1.12.1/jquery-ui.js" />
+
+ <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--->
+ 
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+ 
+<p>Date: <input type="text" id="datepicker"/></p> 
+
+<!--                                            
+<apex:form>
+<apex:inputfield id="datepicker" value="{!Contact.Birthdate}" type="text"/>
+</apex:form> 
+-->
+</body>
+</html>
+</apex:page>

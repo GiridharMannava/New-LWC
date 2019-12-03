@@ -1,0 +1,17 @@
+<apex:page sidebar="false" showHeader="false">
+ <Apex:form >
+ 
+ <input type="text"/>
+ 
+ 
+ 
+ <p >Hello welcome to Salesforce</p>
+ 
+ 
+ 
+ 
+ 
+ 
+ </apex:form>
+ 
+</apex:page>

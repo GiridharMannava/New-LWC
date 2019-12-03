@@ -1,0 +1,19 @@
+<apex:page controller="studentexample">
+
+<apex:form >
+<apex:pageBlock >
+Enter Experience : <apex:inputText value="{!exp}"/>
+
+<apex:pageBlockSection >
+Salary : <apex:outputText value="{!sal}"/> 
+</apex:pageBlockSection>
+
+<apex:pageBlockSection >
+Bonus : <apex:outputText value="{!bonus}"/> 
+</apex:pageBlockSection>
+<apex:commandButton action="{!calculate}" value="calculate"/>
+</apex:pageBlock>
+</apex:form>
+
+ <apex:Messages />     
+</apex:page>

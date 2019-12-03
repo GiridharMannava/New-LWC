@@ -1,0 +1,41 @@
+<apex:page controller="displayaccount" readOnly="true" >
+
+<apex:form >>
+
+<Apex:pageBlock >
+
+<apex:pageBlockSection >
+
+<apex:pageBlockTable value="{!acclst}" var="ac" title="Account details" >
+
+<apex:column value="{!ac.Id}" headerValue="Id"  />
+
+<apex:column value="{!ac.Name}" headerValue="Account Name" />
+
+</apex:pageBlockTable>
+
+
+<apex:pageBlockTable value="{!conlst}" var="ac">
+
+<apex:column value="{!ac.Id}" headerValue="Id" />
+
+<apex:column value="{!ac.Name}" headerValue="Contact Name" />
+
+</apex:pageBlockTable>
+
+<apex:commandButton value="Submit" action="{!test}"/>
+
+<apex:commandLink value="Submit" action="{!test}"/>
+
+
+</Apex:pageBlockSection>
+
+</Apex:pageBlock>
+ 
+<apex:actionPoller action="{!actionpollar}" interval="10"/>
+
+ 
+
+</apex:form>
+
+</apex:page>

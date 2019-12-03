@@ -1,0 +1,29 @@
+<apex:page controller="giridhartestingg">
+
+    <apex:form >
+
+        <apex:pageMessages id="pgMsg"></apex:pageMessages>
+
+         
+
+        <apex:outputText value="How Is It: {!count}" id="counter"/>
+
+        <apex:actionStatus id="counterStatus">
+
+            <apex:facet name="start">
+
+                 <apex:outputLabel value="In Creament in Progress"></apex:outputLabel>
+
+     
+
+            </apex:facet>
+
+        </apex:actionStatus>   
+
+        <apex:actionPoller action="{!incrementCounter}" rerender="counter,pgMsg"
+
+            status="counterStatus" interval="5"/>
+
+    </apex:form>
+
+</apex:page>

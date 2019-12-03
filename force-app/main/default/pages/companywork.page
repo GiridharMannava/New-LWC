@@ -1,0 +1,18 @@
+<apex:page controller="companywork" readOnly="true">
+ 
+ <apex:form rendered="{! renderingService != 'PDF' }" style="text-align: right; margin: 10px;">
+ <apex:commandLink action="{! saveToPdf }" value="DOWNLOAD AS PDF">
+ <apex:param assignTo="{! renderedFileName }" value="Contact-List.pdf"/>
+ </apex:commandLink>   
+ </apex:form>
+ 
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:pageBlockTable value="{!tt}" var="test">
+<apex:column value="{!test.Name}"/>
+<apex:column value="{!test.phone__c}"/>
+</apex:pageblockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+</apex:page>

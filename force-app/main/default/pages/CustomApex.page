@@ -1,0 +1,29 @@
+<apex:page controller="customapex">
+
+ <apex:form >
+ 
+ <apex:pageBlock >
+ 
+ <apex:pageBlockSection columns="2">
+ 
+ <apex:inputText value="{!accname}" label="Account Name"/>
+ 
+ <apex:inputText value="{!phonenum}" label="Phone Number"/>
+ 
+ <apex:inputText value="{!conname}" label="Contact Name"/>
+ 
+ <apex:inputText value="{!connum}" label="Contact phone"/>
+
+ 
+ <apex:commandButton value="Save Account" action="{!saveresult}"/>
+ 
+ 
+ </apex:pageBlockSection>
+ 
+ 
+ </apex:pageBlock>
+ 
+
+ </apex:form>
+ 
+ </apex:page>

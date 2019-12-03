@@ -1,0 +1,44 @@
+<apex:page controller="javascript" showHeader="true">
+
+<script>
+
+function sumit(){
+
+var cd=document.getElementById("aa").value;
+
+alert(cd);
+
+var ee=document.getElementById("bb").checked;
+
+alert(ee);
+
+if(bb){
+
+document.getElementById("qq").innerHTML=cd;
+}
+
+}
+
+</script>
+
+<apex:form id="mlk">
+
+<apex:pageBlock title="MY PRACTICE">
+
+Enter Number:<input type="textbox" id="aa"/><br/>
+
+Have DOB:<input type="checkbox" id="bb"/>
+
+<p id="qq">HELLO WELCOME</p>
+
+<br>
+
+<button onclick="sumit();" rendered="mlk">SUBJECT</button>
+
+</br>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

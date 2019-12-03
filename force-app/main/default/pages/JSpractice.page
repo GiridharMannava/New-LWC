@@ -1,0 +1,12 @@
+<apex:page showHeader="false">
+<apex:outputLabel >Enter Your Name</apex:outputLabel>
+<script>
+function Giridhar() {
+alert('Hi Giridhar');
+}
+</script>
+<apex:form >
+<apex:inputText onchange="Giridhar()" label="lol" required="true"/>
+</apex:form>
+
+</apex:page>

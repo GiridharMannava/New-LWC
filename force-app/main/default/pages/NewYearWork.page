@@ -1,0 +1,8 @@
+<apex:page readOnly="true">
+<apex:sectionHeader title="Work" subtitle="done" help="http:\\www.google.com" description="Any Help Just Click help URL"/>
+<apex:pageBlock title="OM" tabStyle="Account">
+ <apex:pageBlockSection title="Hi Giridhar">
+ <h1>Hi how is going</h1>
+ </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

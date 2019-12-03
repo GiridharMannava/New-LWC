@@ -1,0 +1,14 @@
+<apex:page controller="DynamicSchemaforObjects">
+     
+       <apex:form >
+         <apex:selectList value="{!SelectedObject}" multiselect="false" size="1">
+            <apex:selectOptions value="{!allSobjects}"/>
+            <apex:actionSupport event="onchange" action="{!displaySelectedValue}"/>
+         </apex:selectList>
+         
+         You Selected Value Is : {!SelectedObject}
+         
+         
+       </apex:form>
+      
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="userpagecount" action="{!bbb}" showHeader="false">
+
+<apex:pageBlock title="My Practice">
+
+<apex:pageBlockSection title="GIRIDHAR PRACTICE">
+
+<apex:outputText label="Refresh The Page To Se Result" value="{!g}"/>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,27 @@
+<apex:page controller="testpageredirect">
+   
+  <apex:form >
+  
+  <apex:pageBlock >
+  
+  <apex:pageBlockSection >
+  
+  <apex:inputText value="{!acc}"/>
+  
+  
+  </apex:pageBlockSection>
+  
+  <apex:commandButton value="Insert record" action="{!redirect}"/>
+  
+  <apex:commandButton value="TO another page" action="{!redirecttopage}"/>
+  
+  
+  </apex:pageBlock>
+  
+  
+  
+  </apex:form>
+
+
+  
+</apex:page>

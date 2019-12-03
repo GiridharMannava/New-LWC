@@ -1,0 +1,20 @@
+<apex:page controller="testcontroller">
+ 
+ 
+  <apex:pageBlock >
+  
+  <apex:pageBlockTable value="{!acc}" var="accnt">
+  
+  <apex:column value="{!accnt.Id}"/>
+  
+  <apex:column value="{!accnt.name}"/>
+
+  
+  </apex:pageBlockTable>
+  
+  
+  </apex:pageBlock> 
+ 
+ 
+ 
+</apex:page>

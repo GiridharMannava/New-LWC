@@ -1,0 +1,48 @@
+<apex:page standardController="Account">
+  
+  <apex:form >
+ 
+  <script>
+  
+  function sub(){
+  
+  alert("Hi");
+  
+  alert(document.getElementById("txt").value);
+  
+  document.getElementById("opt").innerHTML=document.getElementById("txt").value;
+  
+  alert(document.getElementById("chk1").checked);
+  
+  if(document.getElementById("chk1").checked){
+   
+    document.getElementById("chk2").checked=true;
+  }
+   
+  }
+  
+  </script>
+  
+  
+  <input type="textbox" name="Account Name" value="{!Account.Id}" id="txt"/>
+  
+   <p id="opt"> </p>
+  
+  
+  <button type="button" onclick="sub()">Submit</button>
+  
+  <input type="Checkbox" id="chk1"/>
+  
+    <input type="Checkbox" id="chk2"/>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  </apex:form>
+
+</apex:page>

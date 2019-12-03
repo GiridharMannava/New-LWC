@@ -1,0 +1,23 @@
+<apex:page controller="testingonpgredict" showHeader="false">
+ 
+<apex:form >
+ 
+<apex:pageBlock >
+ 
+<apex:pageBlockSection >
+ 
+<apex:inputText value="{!mgr}"/>
+
+
+</apex:pageBlockSection>
+ 
+<apex:commandButton value="Insert Record" action="{!mytesting}"/>
+
+
+<apex:commandButton value="Second Page" action="{!secondpage}"/>
+
+</apex:pageBlock>
+
+</apex:form>
+ 
+</apex:page>

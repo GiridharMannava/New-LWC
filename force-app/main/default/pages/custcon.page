@@ -1,0 +1,14 @@
+<apex:page controller="custcon" tabStyle="Account" >
+  <apex:form >
+      <apex:outputLabel >Select Your Country:</apex:outputLabel>
+      <apex:selectList required="true" multiselect="false" size="1" label="Type"  value="{!selectedValue}" >
+       <apex:selectOptions value="{!P1}"/>
+       <apex:actionSupport event="onchange" reRender="a"/>
+     </apex:selectList><br/><br/>
+
+    <apex:outputLabel >Select Your State:</apex:outputLabel>
+      <apex:selectList required="true" multiselect="false" size="1" label="Type"   id="a">
+      <apex:selectOptions value="{!P2}"/>
+    </apex:selectList>          
+  </apex:form>
+</apex:page>

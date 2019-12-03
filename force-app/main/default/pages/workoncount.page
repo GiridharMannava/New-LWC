@@ -1,0 +1,13 @@
+<apex:page controller="workoncount" action="{!res}">
+
+<apex:pageBlock >
+
+<apex:pageBlockSection >
+
+<apex:outputText label="Refresh Page To See Result" value="{!dec}"></apex:outputText>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:page>
